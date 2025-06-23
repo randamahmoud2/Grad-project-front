@@ -1,0 +1,28 @@
+.layout-container {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f5f6fa;
+}
+
+.main-content {
+    flex: 1;
+    margin-left: 250px; /* Adjust based on your sidebar width */
+    display: flex;
+    flex-direction: column;
+}
+
+.content-wrapper {
+    padding: 20px;
+    flex: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .main-content {
+        margin-left: 0;
+    }
+    
+    .content-wrapper {
+        padding: 10px;
+    }
+} 

@@ -1,0 +1,34 @@
+.doctor-layout {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.main-content {
+    flex: 1;
+    margin-left: 11%;
+    padding: 20px;
+    transition: margin-left 0.3s ease;
+}
+
+/* Medium screens */
+@media (max-width: 992px) {
+    .main-content {
+        margin-left: 15%;
+    }
+}
+
+/* Small screens */
+@media (max-width: 772px) {
+    .main-content {
+        margin-left: 18%;
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 576px) {
+    .main-content {
+        margin-left: 0;
+        margin-bottom: 60px;
+    }
+} 

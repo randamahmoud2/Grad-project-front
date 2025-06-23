@@ -1,0 +1,266 @@
+.doctorList {
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    background-color: #f8fafc;
+    min-height: 100vh;
+}
+
+.data2 {
+    margin-bottom: 20px;
+    padding: 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.title2 p {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2f6fc8;
+    margin: 0;
+    text-align: center;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 1.1rem;
+    margin-top: 10px;
+    text-align: center;
+}
+
+#split {
+    border: none;
+    height: 3px;
+    background: linear-gradient(to right, #2f6fc8, transparent);
+    margin: 15px 0 30px 0;
+    border-radius: 3px;
+}
+
+.doctors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 25px;
+    padding: 20px;
+}
+
+.doctor-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 1px solid rgba(47, 111, 200, 0.1);
+}
+
+.doctor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(47, 111, 200, 0.15);
+    border-color: rgba(47, 111, 200, 0.2);
+}
+
+.doctor-image {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+    background: #f0f4f8;
+}
+
+.doctor-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.doctor-card:hover .doctor-image img {
+    transform: scale(1.08);
+}
+
+.rating {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 8px 15px;
+    border-radius: 25px;
+    font-weight: 600;
+    color: #2f6fc8;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+.rating span {
+    color: #ffd700;
+    margin-right: 5px;
+    font-size: 1.1rem;
+}
+
+.doctor-info {
+    padding: 25px;
+}
+
+.doctor-info h3 {
+    margin: 0 0 12px 0;
+    color: #2f6fc8;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.specialty {
+    color: #4a5568;
+    font-weight: 600;
+    margin: 0 0 15px 0;
+    font-size: 1.1rem;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.experience, .education, .address {
+    color: #4a5568;
+    font-size: 0.95rem;
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.experience::before {
+    content: "•";
+    color: #2f6fc8;
+    font-weight: bold;
+}
+
+.education::before {
+    content: "•";
+    color: #2f6fc8;
+    font-weight: bold;
+}
+
+.address::before {
+    content: "•";
+    color: #2f6fc8;
+    font-weight: bold;
+}
+
+.book-btn {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #2f6fc8, #1e4f9e);
+    color: white;
+    border: none;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+    border-radius: 0 0 20px 20px;
+}
+
+.book-btn:hover {
+    background: linear-gradient(135deg, #1e4f9e, #2f6fc8);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 1200px) {
+    .doctors-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+        padding: 15px;
+    }
+
+    .doctor-image {
+        height: 220px;
+    }
+}
+
+@media (max-width: 768px) {
+    .doctorList {
+        padding: 15px;
+    }
+
+    .data2 {
+        padding: 15px;
+    }
+
+    .title2 p {
+        font-size: 1.6rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .doctors-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .doctor-image {
+        height: 200px;
+    }
+
+    .doctor-info {
+        padding: 20px;
+    }
+
+    .doctor-info h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .doctorList {
+        padding: 10px;
+    }
+
+    .data2 {
+        padding: 10px;
+    }
+
+    .title2 p {
+        font-size: 1.4rem;
+    }
+
+    .subtitle {
+        font-size: 0.9rem;
+    }
+
+    .doctors-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 5px;
+    }
+
+    .doctor-image {
+        height: 220px;
+    }
+
+    .rating {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+
+    .doctor-info {
+        padding: 15px;
+    }
+
+    .doctor-info h3 {
+        font-size: 1.1rem;
+    }
+
+    .specialty {
+        font-size: 1rem;
+    }
+
+    .experience, .education, .address {
+        font-size: 0.9rem;
+    }
+
+    .book-btn {
+        padding: 12px;
+        font-size: 0.95rem;
+    }
+}
